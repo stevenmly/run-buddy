@@ -97,6 +97,7 @@ footer a {
 }
 /* Footer Styles End */
 
+/* Style All Section Tags */
 section {
     padding: 60px;
 }
@@ -113,26 +114,6 @@ section {
     align-items: flex-start;
 }
 
-.hero-form {
-    background-color: rgba( 252, 225, 56, 0.8);
-    color: var(--secondary-color);
-    padding: 20px;
-    border: solid 3px var(--secondary-color);
-    width: 45%;
-    margin: 3.5%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-}
-
-.hero-form h3 {
-    font-size: 24px;
-    margin: 0;
-}
-
-.hero-form p {
-    margin: 5px 0 15px 0;
-}
-
 .hero-cta {
     width: 35%;
     text-align: right;
@@ -147,6 +128,30 @@ section {
     font-size: 55px;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0,0,0, 0.5);
+}
+
+.hero-form {
+    background-color: rgba( 252, 225, 56, 0.8);
+    color: var(--secondary-color);
+    padding: 20px;
+    border: solid 3px var(--secondary-color);
+    width: 45%;
+    margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.hero-form button:hover {
+    background-color: var(--tertiary-color);
+}
+
+.hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.hero-form p {
+    margin: 5px 0 15px 0;
 }
 
 .form-input {
@@ -177,10 +182,6 @@ section {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-}
-
-.hero-form button:hover {
-    background-color: var(--tertiary-color);
 }
 
 .checkbox-wrapper input, .radio-wrapper input {
@@ -242,23 +243,9 @@ section {
 .radio-wrapper input:checked + label::after {
     content: "";
 }
+/* Hero Styles End */
 
-
-/* Hero Style End */
-
-.intro p {
-    line-height: 1.7;
-    color: var(--tertiary-color);
-    width: 80%;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.steps {
-    background: var(--primary-color);
-}
-
+/* Section Styles Start */
 .section-title {
     font-size: 48px;
     color: var(--secondary-color);
@@ -275,6 +262,23 @@ section {
 
 .secondary-border {
     border-color: var(--tertiary-color);
+}
+/* Section Styles End*/
+
+/* What We Do Styles */
+.intro p {
+    line-height: 1.7;
+    color: var(--tertiary-color);
+    width: 80%;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* What We Do Styles End */
+
+/* What You Do Styles Start */
+.steps {
+    background: var(--primary-color);
 }
 
 .step {
@@ -327,7 +331,9 @@ section {
     line-height: 1.5;
     color: var(--secondary-color);
 }
+/* What You Do Styles End */
 
+/* Meet The Trainers Start */
 .trainers {
     width: 100%;
     margin: 0 auto;
@@ -365,6 +371,59 @@ section {
 .trainer-bio p {
     font-size: 17px;
 }
+/* Trainer Styles End */
+
+/* Services Styles Start */
+.services {
+    background: var(--primary-color);
+}
+
+.service-grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.service-grid-container {
+    background: lightyellow;
+    width: 80%;
+    display: grid;
+    /* repeat(iterator, size) */
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.service-grid-item {
+    padding: 15px 0;
+    border: 2px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-grid-item.basic {
+    grid-column: 2 / span 1;
+}
+
+.service-grid-item.both {
+    grid-column: 2 / span 2;
+}
+
+.service-grid-item.cancel {
+    writing-mode: vertical-lr;
+    grid-row: 1 / -1;
+    transform: rotate(180deg);
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* Service Styles End */
 
 /* REACH OUT STYLES START */
 .info{
@@ -445,6 +504,7 @@ section {
 
 /* REACH OUT STYLES END */
 
+/* Utitlities */
 .text-left {
     text-align: left;
 }
@@ -457,56 +517,6 @@ section {
     display: flex;
 }
 
-/* SERVICES STYLES BEGIN */
-.services {
-    background: var(--primary-color);
-}
-
-.service-grid-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.service-grid-container {
-    background: lightyellow;
-    width: 80%;
-    display: grid;
-    /* repeat(iterator, size) */
-    grid-template-columns: 1fr repeat(2, 4fr);
-    grid-template-rows: repeat(5, 1fr) 2fr;
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-}
-
-.service-grid-item {
-    padding: 15px 0;
-    border: 2px solid var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.service-grid-item.basic {
-    grid-column: 2 / span 1;
-}
-
-.service-grid-item.both {
-    grid-column: 2 / span 2;
-}
-
-.service-grid-item.cancel {
-    writing-mode: vertical-lr;
-    grid-row: 1 / -1;
-    transform: rotate(180deg);
-}
-
-.grid-head, .grid-price, .service-grid-item.cancel {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
